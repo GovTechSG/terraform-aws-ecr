@@ -4,7 +4,7 @@ This module creates an private ECR
 
 ## Usage
 
-```hcl`
+```hcl
 module "test" {
   source = "../../"
   repo_names = {
