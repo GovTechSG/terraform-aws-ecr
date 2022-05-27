@@ -3,12 +3,9 @@ variable "repo_names" {
   description = "Name of ECR repository"
 }
 
-variable "project_tags" {
-  type = map(string)
-  default = {
-    Terraform = "True"
-  }
-  description = "Tagging of ECR repository"
+variable "pull_through_cahce_rules" {
+  type        = map(map(string))
+  description = "Use a prefix to pull through from a 3rd party upstream registry."
 }
 
 variable "max_days_for_untagged_images" {
@@ -34,7 +31,15 @@ variable "allowed_account_arns" {
   description = "Map of account IDs with permission to ECR repos"
 }
 
-//variable "repository_policy" {
-//  type        = string
-//  description = "Policy on each ECR repo"
-//}
+variable "project_tags" {
+  type = map(string)
+  default = {
+    Terraform = "True"
+  }
+  description = "Tagging of ECR repository"
+}
+
+variable "tags" {
+  type    = map(string)
+  default = {}
+}

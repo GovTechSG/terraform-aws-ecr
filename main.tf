@@ -7,9 +7,16 @@ resource "aws_ecr_repository" "repo" {
     scan_on_push = var.scan_on_push
   }
 
-  tags = merge(var.project_tags, {
+  tags = merge(var.tags, {
     Name = each.value
   })
+}
+
+resource "aws_ecr_pull_through_cache_rule" "main" {
+  for_each = var.pull_through_cahce_rules
+
+  ecr_repository_prefix = each.value.prefix
+  upstream_registry_url = each.value.url
 }
 
 resource "aws_ecr_lifecycle_policy" "lifecycle" {
