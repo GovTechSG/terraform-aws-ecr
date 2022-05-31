@@ -90,7 +90,7 @@ No modules.
 | <a name="input_image_tag_mutability"></a> [image\_tag\_mutability](#input\_image\_tag\_mutability) | Whether image tags can be mutated or not | `string` | `"IMMUTABLE"` | no |
 | <a name="input_max_days_for_untagged_images"></a> [max\_days\_for\_untagged\_images](#input\_max\_days\_for\_untagged\_images) | Maximum days to keep untagged images in repository | `number` | `14` | no |
 | <a name="input_project_tags"></a> [project\_tags](#input\_project\_tags) | Tagging of ECR repository | `map(string)` | <pre>{<br>  "Terraform": "True"<br>}</pre> | no |
-| <a name="input_pull_through_cahce_rules"></a> [pull\_through\_cahce\_rules](#input\_pull\_through\_cahce\_rules) | Use a prefix to pull through from a 3rd party upstream registry. | `map(map(string))` | n/a | yes |
+| <a name="input_pull_through_cache_rules"></a> [pull\_through\_cache\_rules](#input\_pull\_through\_cache\_rules) | Use a prefix to pull through from a 3rd party upstream registry. | `map(map(string))` | n/a | yes |
 | <a name="input_repo_names"></a> [repo\_names](#input\_repo\_names) | Name of ECR repository | `map(string)` | n/a | yes |
 | <a name="input_scan_on_push"></a> [scan\_on\_push](#input\_scan\_on\_push) | Scan container images on push | `bool` | `true` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(string)` | `{}` | no |
