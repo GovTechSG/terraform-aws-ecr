@@ -13,7 +13,7 @@ resource "aws_ecr_repository" "repo" {
 }
 
 resource "aws_ecr_pull_through_cache_rule" "main" {
-  for_each = var.pull_through_cahce_rules
+  for_each = var.pull_through_cache_rules
 
   ecr_repository_prefix = each.value.prefix
   upstream_registry_url = each.value.url
