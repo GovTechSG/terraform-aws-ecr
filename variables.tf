@@ -3,9 +3,10 @@ variable "repo_names" {
   description = "Name of ECR repository"
 }
 
-variable "pull_through_cahce_rules" {
+variable "pull_through_cache_rules" {
   type        = map(map(string))
   description = "Use a prefix to pull through from a 3rd party upstream registry."
+  default     = {}
 }
 
 variable "max_days_for_untagged_images" {
