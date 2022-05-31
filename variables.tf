@@ -6,6 +6,7 @@ variable "repo_names" {
 variable "pull_through_cahce_rules" {
   type        = map(map(string))
   description = "Use a prefix to pull through from a 3rd party upstream registry."
+  default     = {}
 }
 
 variable "max_days_for_untagged_images" {
